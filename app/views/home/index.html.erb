@@ -1,0 +1,26 @@
+<h2>Regular canvas page</h2>
+
+<p>This is a regular canvas page. Can contain anything you want for your application</p>
+<p>Every canvas (everyone of them!) receives a token for you to use to access the <a href="http://platform.shopyourway.com" target="_blank">ShopYourWay Platform APIs</a></p>
+<div class="exmple">
+  <h3>For example:</h3>
+  <div>
+    Using /users/current API the application now knows that you are:
+    <div class="user">
+      <a class-="image-link" href="<%= @profile_url %>" target="_top"><img alt="<%= @name %> image" src="<%= @profile_img %>"/></a>
+      <div class="details">
+        <div>Id: <%= @user_id  %></div>
+        <div>Name: <a href="<%= @profile_url %>" target="_top"><%= @name %></a></div>
+        <div>
+          <% if @followers.any? %>
+              <span>You follow <%= @followers.length %>, one of them is <a href="<%= @followers.first["profileUrl"] %>" target="_top"><%= @followers.first["name"] %></a></span>
+          <% else %>
+              <span>You don't follow anybody</span>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<p>To learn more about the ShopYourWay Platform APIs go to <a href="https://developer.shopyourway.com/display/platdev/The+API" target="_blank">ShopYourWay Developers site</a></p>
+<p>Canvas is available via http://base-app-url/</p>
