@@ -3,6 +3,8 @@ AppWireframeRuby::Application.routes.draw do
   match '/landing' => 'landing#landing'
   match '/login' => 'login#login'
   match '/post-login' => 'login#post_login'
+  match '/r' => 'home#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

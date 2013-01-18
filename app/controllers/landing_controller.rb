@@ -2,6 +2,7 @@
 #This is the application landing page, this page is public
 
 class LandingController < ActionController::Base
+  layout 'layouts/default'
 
   def landing
     if !Rails.application.config.respond_to?("app_id") || !Rails.application.config.respond_to?("app_secret")

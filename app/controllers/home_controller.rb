@@ -2,6 +2,7 @@
 #This is the main application page
 
 class HomeController < ActionController::Base
+  layout 'layouts/default'
 
   def index
     if !Rails.application.config.respond_to?("app_id") || !Rails.application.config.respond_to?("app_secret") || !request.params.has_key?("token")

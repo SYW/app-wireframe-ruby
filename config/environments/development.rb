@@ -35,9 +35,12 @@ AppWireframeRuby::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
 
-  #Shopyourway configurations
-  #config.app_id =
-  #config.app_secret =
+  # ShopYourWay configurations
+  # Get your app ID and secret by registering your app on http://galileo.shopyourway.com/app/control-panel
+  # Don't forget to restart your server after making changes in this file.
+
+  #config.app_id = 'YOUR APPID GOES HERE'
+  #config.app_secret = 'YOUR APP SECRET GOES HERE'
   config.api_base_url = 'http://galileoplatform.shopyourway.com'
-  config.site_base_url = 'http://www.shopyourway.com'
+  config.site_base_url = 'http://galileo.shopyourway.com'
 end

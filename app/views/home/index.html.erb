@@ -7,13 +7,13 @@
   <div>
     Using /users/current API the application now knows that you are:
     <div class="user">
-      <a class-="image-link" href="<%= @profile_url %>" target="_top"><img alt="<%= @name %> image" src="<%= @profile_img %>"/></a>
+      <a class-="image-link" href="<%= @profile_url %>" target="_top"><img alt="<%= @name %> image" src="<%= @image_url %>"/></a>
       <div class="details">
         <div>Id: <%= @user_id  %></div>
         <div>Name: <a href="<%= @profile_url %>" target="_top"><%= @name %></a></div>
         <div>
           <% if @followers.any? %>
-              <span>You follow <%= @followers.length %>, one of them is <a href="<%= @followers.first["profileUrl"] %>" target="_top"><%= @followers.first["name"] %></a></span>
+              <span>You follow <%= @followers.length %> people, one of them is <a href="<%= @followers.first["profileUrl"] %>" target="_top"><%= @followers.first["name"] %></a></span>
           <% else %>
               <span>You don't follow anybody</span>
           <% end %>
